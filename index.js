@@ -19,3 +19,16 @@
     console.log(nameOfGoods);
     console.log(`Общая сумма товара: ${amountOfGoods * valueOfGoods}`);
 }
+
+// Новый блок инструкций
+{
+    const defineTheNameOfGoods = prompt("Наименование товара", "Whiskas");
+    const defineTheAmountOfGoods = Number(prompt("Количество товара", "17"));
+    const defineTheValueOfGoods = prompt("Категория товара", "Pet Food");
+    const defineTheCategoryOfGoods = Number(prompt("Цена товара", "0.50"));
+
+    console.log(typeof defineTheAmountOfGoods);
+    console.log(typeof defineTheCategoryOfGoods);
+
+    console.log(`В наличии ${defineTheAmountOfGoods} шт. ${defineTheNameOfGoods} на сумму ${defineTheAmountOfGoods * defineTheCategoryOfGoods}$`);
+}
