@@ -25,8 +25,9 @@
         // Вызвать функцию для получения случайного числа
         // от 1 до имеющегося количества шариков у компьютера
         const computerBallCount = getRandomIntInclusive(1, countBalls.player2);
+        console.log(computerBallCount);
         const parityChoice = prompt(`Компьютер загадал число. Угадайте, чётное или нечётное их количество:`);
-
+        
         // Если игрок хочет завершить игру здесь, уточнить
         if (parityChoice === null) {
           const exit = confirm('Вы уверены, что хотите выйти из игры?');
@@ -116,6 +117,8 @@
 
       // После каждого завершенного хода
       // вывести окно с количеством шариков у игрока и компьютера
+      countBalls.player = Math.min(10, Math.max(0, countBalls.player));
+      countBalls.player2 = Math.min(10, Math.max(0, countBalls.player2));
       alert(`Количество шариков у игрока: ${countBalls.player} шт, и у компьютера: ${countBalls.player2} шт`);
 
       // если у игрока или компьютера набирается 10 шариков,
