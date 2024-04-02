@@ -27,8 +27,23 @@
         }
       }
 
+      // Проверить, что игрок вводит число
       if (isNaN(playerStep)) {
         alert(`Необходимо выбрать число от 1 до ${countBalls.player}`);
+        start();
+        return;
+      }
+
+      // Проверить, что игрок вводит корректное число
+      if (playerStep <= 0) {
+        alert(`Введите положительное число от 1 до ${countBalls.player}`);
+        start();
+        return;
+      }
+
+      // Проверить, что игрок вводит число в рамках разрешенных чисел
+      if (playerStep > countBalls.player) {
+        alert(`Это число шариков Вам недоступно. Введите число от 1 до ${countBalls.player}`);
         start();
         return;
       }
